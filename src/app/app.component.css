@@ -1,0 +1,11 @@
+/* h1{
+    text-align: center;
+} */
+
+main{
+    min-height: 100vh;
+}
+
+main .card{
+    width: 100%;
+}

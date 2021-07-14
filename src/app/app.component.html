@@ -1,0 +1,30 @@
+<!-- <h1>TO-DO list</h1>
+<to-do [(ngModel)]='newTask' name="newTask" ngDefaultControl></to-do>
+<button (click)="addToList()" class="btn btn-danger">Adicionar nova tarefa a lista</button>
+
+  <div *ngFor="let item of items" style="margin-top: 10px;">
+    <input type="checkbox" value="{{item}}" name="itemlista">{{item}}
+  </div>
+ -->
+
+ <main class="container d-flex flex-column justify-content-center align-items-center ">
+  <div class="card">
+    <div class="card-header">
+      <h2>Nova Tarefa</h2>
+      <div class="d-flex">
+        <input type="text" name="" id="" class="form-control" [(ngModel)]="tarefa_atual" name="tarefa">
+        <button class="btn btn-primary ms-2" (click)="adicionarTarefa()">Adicionar</button>
+      </div>
+    </div>
+
+    <div class="card-body" *ngIf="tarefas.length!=0">
+        <div class="d-flex align-items-center" *ngFor="let tarefa of tarefas; let idx=index">
+          <todo-item  class="flex-grow-1">
+            {{tarefa}}
+          </todo-item>
+          <button class="btn btn-danger" (click)="deletarTarefa(idx)">Apagar</button>
+        </div>
+
+    </div>
+  </div>
+ </main>
